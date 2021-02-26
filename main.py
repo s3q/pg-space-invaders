@@ -211,7 +211,7 @@ while running:
                 create_enemy(2)
                 num_of_enemy += 2
                 speed_step += 2
-                bulletY += 2
+                steps_bulletY += 2
             elif score_value == 40:
                 level_value += 1
                 print("level : " + str(level_value))
@@ -219,7 +219,7 @@ while running:
                 create_enemy(2)
                 num_of_enemy += 2
                 speed_step += 2
-                bulletY += 2
+                steps_bulletY += 2
             elif score_value == 50:
                 level_value += 1
                 print("level : " + str(level_value))
