@@ -47,13 +47,7 @@ def create_enemy(num):
         
 create_enemy(num_of_enemy)
         
-# enemyIcon = pg.image.load(
-#     r"C:\Users\s3q\Desktop\github\sduks\py\game\icon\game-icon\enemy.png")
-# enemyX = rd.randint(0, 768)
-# enemyY = rd.randint(0, 68)
-# steps_enemyX = list_step[rd.randint(0, len(list_step) - 1)]
-# steps_enemyY = 20
-
+        
 # bullet
 bulletIcon = pg.image.load(r"icon\game-icon\bullet.png")
 bulletX = 0
@@ -90,7 +84,6 @@ def is_collision(X1, Y1, X2, Y2):
 speed_step = 4
 
 
-# score = 9
 score_value = 0
 font = pg.font.Font("freesansbold.ttf", 18)
 
@@ -154,11 +147,7 @@ while running:
             running = False
             
         
-
-    # if (posplayer):
-    #     player(posplayer)
-    # else:
-    #     player((playerX, playerY))
+        
     playerX += steps_playerX
     playerY += steps_playerY
 
