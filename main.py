@@ -11,16 +11,16 @@ screen = pg.display.set_mode((screenX, screenY))
 pg.display.set_caption("new game")
 
 # bgc and icon
-background = pg.image.load(r"game\icon\background.png")
-icon = pg.image.load(r"game\icon\icon.png")
+background = pg.image.load(r"icon\background.png")
+icon = pg.image.load(r"icon\icon.png")
 pg.display.set_icon(icon)
 
 # background sound
-pg.mixer.music.load(r"game\music\background.wav")
+pg.mixer.music.load(r"music\background.wav")
 pg.mixer.music.play(-1)
 
 # player
-playerIcon = pg.image.load(r"game\icon\game-icon\player.png")
+playerIcon = pg.image.load(r"icon\game-icon\player.png")
 playerX = (screenX - 32) * 50 / 100
 playerY = (screenY - 32) * 80 / 100
 steps_playerX = 0
@@ -39,7 +39,7 @@ num_of_enemy = 6
 
 def create_enemy(num):
     for i in range(num):
-        enemyIcon.append(pg.image.load(r"game\icon\game-icon\enemy.png"))
+        enemyIcon.append(pg.image.load(r"icon\game-icon\enemy.png"))
         enemyX.append(rd.randint(0, 736))
         enemyY.append(rd.randint(0, 136))
         steps_enemyX.append(list_step[rd.randint(0, len(list_step) - 1)])
@@ -55,7 +55,7 @@ create_enemy(num_of_enemy)
 # steps_enemyY = 20
 
 # bullet
-bulletIcon = pg.image.load(r"game\icon\game-icon\bullet.png")
+bulletIcon = pg.image.load(r"icon\game-icon\bullet.png")
 bulletX = 0
 bulletY = 10
 steps_bulletX = 0
@@ -129,7 +129,7 @@ while running:
 
             if event.key == pg.K_SPACE:
                 fire_bullet((bulletX, bulletY))
-                bullet_sound = pg.mixer.Sound(r"game\music\laser.wav")
+                bullet_sound = pg.mixer.Sound(r"music\laser.wav")
                 bullet_sound.play()
 
             if event.key == pg.K_RIGHT and not playerX >= 736:
@@ -181,7 +181,7 @@ while running:
         collision_lose = is_collision(enemyX[i], enemyY[i], playerX, playerY)
 
         if collision_wine and not collision_lose:
-            explosion_sound = pg.mixer.Sound(r"game\music\explosion.wav")
+            explosion_sound = pg.mixer.Sound(r"music\explosion.wav")
             explosion_sound.play()
             score_value += 1
             print(score_value)
