@@ -1,6 +1,6 @@
-# pg-space-invaders
+# pg-space-invaders🎯
 simple game by python
 
 
-# run
+# run ⛏️
 python3 main.py
