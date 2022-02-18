@@ -1,6 +1,9 @@
 # pg-space-invaders🎯
 simple game by python
 
+# download 🔻
+git clone https://github.com/s3q/pg-space-invaders.git
 
 # run ⛏️
-python3 main.py
+cd pg-space-invaders
+python main.py
