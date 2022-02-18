@@ -5,6 +5,11 @@ simple game by python
 ```
 git clone https://github.com/s3q/pg-space-invaders.git
 ```
+You must install pygame package :
+```
+pip install pygame 
+```
+
 # run ⛏️
 ```
 cd pg-space-invaders
